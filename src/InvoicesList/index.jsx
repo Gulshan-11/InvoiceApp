@@ -8,15 +8,6 @@ const InvoicesList = () => {
   const [showModal, setShowModal] = useState(false);
   const [selectedInvoice, setSelectedInvoice] = useState(null);
 
-  const handleRowClick = (invoice) => {
-    setSelectedInvoice(invoice);
-    setShowModal(true);
-  };
-
-  const handleCloseModal = () => {
-    setShowModal(false);
-  };
-
   const handleUpdateInvoice = (updatedInvoice) => {
     // Implement logic to update the invoice data
     setInvoices((prevInvoices) => {
@@ -124,7 +115,7 @@ const InvoicesList = () => {
             <tbody>
               {invoices.map((item, index) => {
                 return (
-                  <tr key={index} onClick={() => handleRowClick(item)}>
+                  <tr key={index} onClick={() => {setSelectedInvoice(item); setShowModal(true)}}>
                     <td>{item.Id}</td>
                     <td>{item.date}</td>
                     <td>{item.InvoiceNumber}</td>
@@ -140,7 +131,7 @@ const InvoicesList = () => {
       </div>
 
       {/* Modal */}
-      <Modal show={showModal} onHide={handleCloseModal}>
+      <Modal show={showModal} onHide={()=>{setShowModal(false)}}>
         <Modal.Header closeButton>
           <Modal.Title>{selectedInvoice? "Update Invoice" : "Add Invoice"}</Modal.Title>
         </Modal.Header>
@@ -262,7 +253,7 @@ const InvoicesList = () => {
           )}
         </Modal.Body>
         <Modal.Footer>
-          <Button variant="secondary" onClick={handleCloseModal}>
+          <Button variant="secondary" onClick={() => setShowModal(false)}>
             Close
           </Button>
           {selectedInvoice?(<Button

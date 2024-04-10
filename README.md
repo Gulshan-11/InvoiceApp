@@ -51,4 +51,4 @@ The project structure is as follows:
 ```
 
 
-- For now, Onlu update of the row works. I have not completed the add functionality.
+- For now, Only update of the row works. I have not completed the add functionality.
