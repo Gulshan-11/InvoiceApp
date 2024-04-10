@@ -52,3 +52,4 @@ The project structure is as follows:
 
 
 - For now, Only update of the row works. I have not completed the add functionality.
+- Click on the row to update the row values.
