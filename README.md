@@ -1,13 +1,7 @@
 ```markdown
 # React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR (Hot Module Replacement) and some ESLint rules.
-
-## Features
-
-- Seamless integration of React with Vite.
-- HMR for fast development workflow.
-- Minimal setup with ESLint rules for maintaining code quality.
+This provides a setup to get React working in Vite.
 
 ## Usage
 
@@ -46,7 +40,9 @@ The project structure is as follows:
 ```
 - public/          # Public assets (index.html)
 - src/             # Source code
-  - components/    # React components
+  - Home/          # Home Page
+  - InvoicesList   # Invoices Page
+  - SideNavbar     # Side Navbar Component
   - App.jsx        # Main application component
 - .eslintrc.json   # ESLint configuration file
 - vite.config.js   # Vite configuration file
@@ -54,9 +50,5 @@ The project structure is as follows:
 - README.md        # Project documentation
 ```
 
-## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-```
-
-Feel free to adjust the content according to your specific project details and requirements.
+- For now, Onlu update of the row works. I have not completed the add functionality.
